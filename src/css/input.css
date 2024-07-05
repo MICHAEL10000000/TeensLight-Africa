@@ -45,6 +45,18 @@ header>section>p{
     gap: 1rem;
     padding: 1rem;
 }
+.image1{
+    width: 35rem;
+    height: 25rem;
+}
+
+@media screen and (min-width: 1024px) {
+    .visions>div{
+        width: auto;
+        height: auto;
+    }
+}
+
 @media screen and (min-width:768px) {
     .visions{
     display: grid;
@@ -53,6 +65,20 @@ header>section>p{
     place-content: center;
     padding: 3rem 5rem 2rem 5rem;
 }
+/* .visions>div{
+    width: 20rem;
+    height: 17rem;
+    }  */ 
+    .image1{
+        width: 50rem;
+        height: 25rem;
+    }
+    #event-Images{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        place-content: center;
+    }
 }
 
 .About{
@@ -61,3 +87,6 @@ header>section>p{
     background-size: cover;
     text-shadow: 2px 2px black;
 }
+
+
+/*  npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch */

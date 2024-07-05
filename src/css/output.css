@@ -577,6 +577,10 @@ video {
   margin-bottom: 1rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
 .mb-4 {
   margin-bottom: 1rem;
 }
@@ -597,6 +601,10 @@ video {
   margin-top: 2rem;
 }
 
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
 }
@@ -605,8 +613,8 @@ video {
   display: none;
 }
 
-.w-72 {
-  width: 18rem;
+.w-1\/2 {
+  width: 50%;
 }
 
 .grow {
@@ -623,10 +631,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-col-reverse {
-  flex-direction: column-reverse;
 }
 
 .items-start {
@@ -653,6 +657,10 @@ video {
   gap: 4rem;
 }
 
+.gap-2 {
+  gap: 0.5rem;
+}
+
 .gap-4 {
   gap: 1rem;
 }
@@ -675,10 +683,6 @@ video {
 
 .rounded-sm {
   border-radius: 0.125rem;
-}
-
-.border-2 {
-  border-width: 2px;
 }
 
 .border-4 {
@@ -729,6 +733,10 @@ video {
   padding: 0.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-16 {
   padding-left: 4rem;
   padding-right: 4rem;
@@ -739,14 +747,14 @@ video {
   padding-right: 0.5rem;
 }
 
-.px-28 {
-  padding-left: 7rem;
-  padding-right: 7rem;
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
-.px-32 {
-  padding-left: 8rem;
-  padding-right: 8rem;
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
 }
 
 .px-4 {
@@ -754,14 +762,24 @@ video {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-11 {
+  padding-top: 2.75rem;
+  padding-bottom: 2.75rem;
+}
+
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
-}
-
-.py-20 {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
 }
 
 .py-4 {
@@ -774,21 +792,6 @@ video {
   padding-bottom: 2rem;
 }
 
-.py-10 {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-.py-11 {
-  padding-top: 2.75rem;
-  padding-bottom: 2.75rem;
-}
-
 .pb-32 {
   padding-bottom: 8rem;
 }
@@ -799,6 +802,10 @@ video {
 
 .pb-6 {
   padding-bottom: 1.5rem;
+}
+
+.pl-4 {
+  padding-left: 1rem;
 }
 
 .pt-12 {
@@ -937,6 +944,18 @@ header>section>p{
   padding: 1rem;
 }
 
+.image1{
+  width: 35rem;
+  height: 25rem;
+}
+
+@media screen and (min-width: 1024px) {
+  .visions>div{
+    width: auto;
+    height: auto;
+  }
+}
+
 @media screen and (min-width:768px) {
   .visions{
     display: grid;
@@ -945,6 +964,23 @@ header>section>p{
     place-content: center;
     padding: 3rem 5rem 2rem 5rem;
   }
+
+  /* .visions>div{
+    width: 20rem;
+    height: 17rem;
+    }  */
+
+  .image1{
+    width: 50rem;
+    height: 25rem;
+  }
+
+  #event-Images{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    place-content: center;
+  }
 }
 
 .About{
@@ -952,6 +988,13 @@ header>section>p{
   background-repeat: no-repeat;
   background-size: cover;
   text-shadow: 2px 2px black;
+}
+
+/*  npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch */
+
+.hover\:bg-orange-300:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 186 116 / var(--tw-bg-opacity));
 }
 
 .hover\:bg-orange-500:hover {
@@ -974,6 +1017,10 @@ header>section>p{
 }
 
 @media (min-width: 768px) {
+  .md\:mb-0 {
+    margin-bottom: 0px;
+  }
+
   .md\:ml-40 {
     margin-left: 10rem;
   }
@@ -1002,6 +1049,11 @@ header>section>p{
     gap: 4rem;
   }
 
+  .md\:px-28 {
+    padding-left: 7rem;
+    padding-right: 7rem;
+  }
+
   .md\:px-32 {
     padding-left: 8rem;
     padding-right: 8rem;
@@ -1015,9 +1067,34 @@ header>section>p{
   .md\:pr-28 {
     padding-right: 7rem;
   }
+
+  .md\:pt-12 {
+    padding-top: 3rem;
+  }
 }
 
 @media (min-width: 1024px) {
+  .lg\:flex-row {
+    flex-direction: row;
+  }
+
+  .lg\:flex-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  .lg\:items-start {
+    align-items: flex-start;
+  }
+
+  .lg\:gap-16 {
+    gap: 4rem;
+  }
+
+  .lg\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+
   .lg\:pl-16 {
     padding-left: 4rem;
   }
