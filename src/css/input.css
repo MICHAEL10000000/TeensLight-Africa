@@ -112,10 +112,10 @@ header>section>p{
 }
 .animate {
     animation-name: slide;
-    animation-duration: 20s;
-    animation-delay: 3s;
+    animation-duration: 15s;
+   /*  animation-delay: 3s; */
     animation-iteration-count: infinite;
-    
+    animation-timing-function: ease-out;
 }
 @keyframes slide {
     0% {
@@ -136,8 +136,8 @@ header>section>p{
     }
     100%{
         background-image: var(--background3);
-    background-repeat: no-repeat;
-    background-size: cover;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
 }

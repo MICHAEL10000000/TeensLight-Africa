@@ -1036,9 +1036,10 @@ header>section>p{
 
 .animate {
   animation-name: slide;
-  animation-duration: 20s;
-  animation-delay: 3s;
+  animation-duration: 15s;
+  /*  animation-delay: 3s; */
   animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
 }
 
 @keyframes slide {
