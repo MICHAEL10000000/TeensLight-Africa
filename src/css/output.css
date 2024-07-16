@@ -916,6 +916,14 @@ video {
   padding: 0;
 }
 
+:root{
+  --firstbackground: url(../assets/Images/img_1_1719672710234.jpg);
+  --background1 :url(../assets/Images/ministering.jpg);
+  --background2: url(../assets/Images/img_1_1720134507946.jpg);
+  --background3: url(../assets/Images/img_1_1719672710234.jpg)
+
+}
+
 @font-face {
   font-family: RobotoB;
 
@@ -1001,10 +1009,26 @@ header>section>p{
     gap: 2rem;
     place-content: center;
   }
+
+  .inspiration > div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-content: center;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .inspiration > div {
+    display: flex;
+    padding-left: 0%;
+    padding-right: 0%;
+  }
 }
 
 .About{
-  background-image: url(../assets/Images/img_1_1719672710234.jpg);
+  background-image: var(--firstbackground);
   background-repeat: no-repeat;
   background-size: cover;
   text-shadow: 2px 2px black;
@@ -1015,25 +1039,30 @@ header>section>p{
   animation-duration: 20s;
   animation-delay: 3s;
   animation-iteration-count: infinite;
-  animation-timing-function: ease-in;
 }
 
 @keyframes slide {
+  0% {
+    background-image: var(--firstbackground);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   35%{
-    background: url(../assets/Images/ministering.jpg);
+    background: var(--background1);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
   }
 
   70%{
-    background: url(../assets/Images/img_1_1720134507946.jpg);
+    background: var(--background2);
     background-repeat: no-repeat;
     background-size: cover;
   }
 
   100%{
-    background-image: url(../assets/Images/img_1_1719672710234.jpg);
+    background-image: var(--background3);
     background-repeat: no-repeat;
     background-size: cover;
   }
